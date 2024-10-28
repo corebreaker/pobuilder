@@ -1,0 +1,23 @@
+[package]
+name = "pobuilder"
+version = "0.1.0"
+edition = "2021"
+description = "Build or modify translation catalogs in PO format."
+authors = ["Frédéric Meyer <frederic.meyer.77@gmail.com>"]
+license = "MIT"
+documentation = "https://docs.rs/pobuilder"
+repository = "https://github.com/corebreaker/pobuilder"
+readme = "README.md"
+keywords = ["translate", "po", "gettext", "file"]
+categories = ["internationalization", "text-processing"]
+
+[package.metadata.scripts]
+fmt = "cargo +nightly fmt --all"
+
+[build-dependencies]
+lalrpop = "0.22"
+
+[dependencies]
+lalrpop-util = { version = "0.22", features = ["lexer"] }
+locale_config = "0.3"
+regex = "1.11"
